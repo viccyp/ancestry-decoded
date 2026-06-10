@@ -1,0 +1,72 @@
+---
+permalink: slide-14.html
+pageTitle: Forensic Summary
+slideNum: 14
+chromeLabel: Summary
+chromeTheme: light
+prevHref: slide-13.html
+nextHref: slide-15.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include "head.njk" %}
+<style>
+  .summary {
+    flex: 1;
+    padding: calc(var(--margin) + 0.5rem) var(--margin) var(--margin);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: clamp(2rem, 4vw, 4rem);
+    align-items: start;
+  }
+  .summary__main h2 { margin: 0.6rem 0 1.4rem; max-width: 16ch; }
+  .summary__main p {
+    font-size: 0.86rem; line-height: 1.75; max-width: 50ch;
+    margin: 0 0 1.1rem;
+  }
+  .summary__aside {
+    width: clamp(220px, 24vw, 280px);
+    border: 1px solid var(--line-gold);
+    background: var(--cream-2);
+    padding: 1.4rem 1.5rem;
+  }
+  .summary__aside h3 {
+    font-size: 0.6rem; font-weight: 700; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--bronze); margin: 0 0 1.2rem;
+  }
+  .summary__hi {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 0.65rem 0; border-bottom: 1px solid var(--line);
+    font-size: 0.78rem;
+  }
+  .summary__hi:last-child { border-bottom: 0; }
+  .summary__hi b {
+    font-family: var(--serif); font-size: 1.1rem; color: var(--forest);
+  }
+</style>
+</head>
+<body class="slide-page">
+<main class="slide">
+  <div class="slide__body">
+    <section class="summary">
+      <div class="summary__main">
+        <span class="kicker">{{ report.summary.kicker }}</span>
+        <h2 class="display">{{ report.summary.headline | safe }}</h2>
+        {% for p in report.summary.paragraphs %}
+        <p>{{ p }}</p>
+        {% endfor %}
+      </div>
+      <aside class="summary__aside">
+        <h3>At a glance</h3>
+        {% for hi in report.summary.highlights %}
+        <div class="summary__hi"><span>{{ hi.label }}</span><b>{{ hi.value }}</b></div>
+        {% endfor %}
+      </aside>
+    </section>
+  </div>
+  {% include "chrome.njk" %}
+</main>
+<script src="assets/js/report.js"></script>
+</body>
+</html>

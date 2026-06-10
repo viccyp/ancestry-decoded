@@ -1,0 +1,27 @@
+<section class="feat-detail">
+  <div class="feat-detail__left">
+    <span class="kicker kicker--plain">{{ feature.kicker }}</span>
+    <h2 class="display">{{ feature.title }}</h2>
+    <p class="body feat-detail__desc">{{ feature.description }}</p>
+    <div class="feat-detail__metrics">
+      {% for m in feature.metrics %}
+      <div class="metric">
+        <div class="metric__val">{{ m.value }}{% if m.unit %}<span class="metric__unit">{{ m.unit }}</span>{% endif %}</div>
+        <div class="metric__label">{{ m.label }}</div>
+        {% if m.note %}<div class="metric__note">{{ m.note }}</div>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="feat-detail__right">
+    <div class="feat-detail__diagram" style="background-image:url('{{ feature.diagram }}');">
+      <span class="feat-detail__diagram-cap">{{ feature.diagramCaption }}</span>
+    </div>
+    {% if feature.interpretation %}
+    <div class="feat-detail__interp">
+      <span class="tag">Interpretation</span>
+      <p>{{ feature.interpretation }}</p>
+    </div>
+    {% endif %}
+  </div>
+</section>

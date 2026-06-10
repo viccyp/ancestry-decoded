@@ -1,0 +1,66 @@
+---
+permalink: slide-01.html
+pageTitle: Cover
+slideNum: 1
+chromeLabel: Cover
+chromeTheme: dark
+prevHref: index.html
+nextHref: slide-02.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include "head.njk" %}
+<style>
+  .cover { color: var(--cream); display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+  .cover__left {
+    position: relative; z-index: 10;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 0 var(--margin);
+    background: linear-gradient(90deg, rgba(26,42,58,0.97) 0%, rgba(26,42,58,0.85) 70%, rgba(26,42,58,0) 100%);
+  }
+  .cover__eyebrow { margin-bottom: clamp(1.5rem, 3vw, 2.4rem); color: var(--gold); }
+  .cover h1 { max-width: 12ch; }
+  .cover__sub {
+    margin-top: clamp(1.6rem, 3vw, 2.6rem);
+    max-width: 38ch;
+    color: rgba(249,248,244,0.82);
+    font-family: var(--serif);
+    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+    line-height: 1.55;
+    font-style: italic;
+  }
+  .cover__right { position: relative; overflow: hidden; }
+  .cover__portrait {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center top;
+    opacity: 0.55;
+    filter: grayscale(0.15) contrast(1.05);
+  }
+  .cover__fade {
+    position: absolute; inset: 0; z-index: 2;
+    background: linear-gradient(90deg, var(--midnight) 0%, rgba(26,42,58,0.4) 35%, transparent 65%);
+  }
+  .cover__fade-v { position: absolute; inset: 0; z-index: 3; background: linear-gradient(to top, rgba(26,42,58,0.7), transparent 40%); }
+</style>
+</head>
+<body class="slide-page">
+<main class="slide">
+  <div class="slide__body cover">
+    <div class="cover__left">
+      <span class="kicker cover__eyebrow">{{ report.cover.kicker }} &nbsp;·&nbsp; {{ report.meta.year }}</span>
+      <h1 class="display">{{ report.meta.titlePrimary }}<br /><span class="accent">{{ report.meta.titleAccent }}</span></h1>
+      <p class="cover__sub">{{ report.meta.tagline }}</p>
+    </div>
+    <div class="cover__right">
+      <div class="cover__portrait" style="background-image:url('{{ report.images.portrait }}');"></div>
+      <div class="cover__fade"></div>
+      <div class="cover__fade-v"></div>
+    </div>
+  </div>
+  {% include "chrome.njk" %}
+</main>
+<div class="hint">Use &#8592; &#8594; arrows to navigate &nbsp;·&nbsp; F for fullscreen</div>
+<script src="assets/js/report.js"></script>
+</body>
+</html>

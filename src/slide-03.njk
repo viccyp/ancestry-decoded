@@ -1,0 +1,26 @@
+---
+permalink: slide-03.html
+pageTitle: Facial Feature Breakdown
+slideNum: 3
+chromeLabel: Section I
+chromeTheme: dark
+prevHref: slide-02.html
+nextHref: slide-04.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include "head.njk" %}
+<style>{% include "styles/section-head.css" %}</style>
+</head>
+<body class="slide-page">
+<main class="slide">
+  <div class="slide__body">
+    {% set section = report.sections.features %}
+    {% include "section-head.njk" %}
+  </div>
+  {% include "chrome.njk" %}
+</main>
+<script src="assets/js/report.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+.sect-head {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--margin);
+  background: var(--midnight);
+  color: var(--cream);
+}
+.sect-head__num {
+  font-family: var(--serif);
+  font-size: clamp(5rem, 14vw, 11rem);
+  line-height: 0.85;
+  color: rgba(212,175,55,0.18);
+  margin-bottom: -0.15em;
+}
+.sect-head .kicker { color: var(--gold); margin-bottom: 1rem; }
+.sect-head h2 { max-width: 18ch; margin: 0; }
+.sect-head h2 em { color: var(--gold); }
+.sect-head__line {
+  width: 60px; height: 1px;
+  background: var(--gold);
+  margin: clamp(1.4rem, 3vh, 2rem) 0;
+}
+.sect-head__sub {
+  max-width: 42ch;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  color: rgba(249,248,244,0.72);
+  line-height: 1.55;
+  margin: 0;
+}

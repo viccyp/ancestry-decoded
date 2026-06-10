@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include "head.njk" %}
+<style>
+  .story {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+  }
+  .story__text {
+    padding: calc(var(--margin) + 0.5rem) var(--margin) var(--margin);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .story__text h2 { margin: 0.6rem 0 1rem; max-width: 16ch; }
+  .story__body { font-size: 0.86rem; line-height: 1.75; max-width: 42ch; margin: 0 0 1.6rem; }
+  .story__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    border-top: 1px solid var(--line);
+    padding-top: 1.2rem;
+  }
+  .story__stat .v {
+    font-family: var(--serif);
+    font-size: clamp(1.3rem, 2vw, 1.7rem);
+    color: var(--forest);
+    line-height: 1.05;
+  }
+  .story__stat .l {
+    font-size: 0.58rem; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--ink-60); margin-top: 0.35rem;
+  }
+  .story__visual { position: relative; overflow: hidden; }
+  .story__img {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+  }
+  .story__img::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(90deg, var(--cream) 0%, transparent 18%);
+  }
+  .story__portrait-wrap {
+    position: absolute; bottom: var(--margin); right: var(--margin); z-index: 3;
+    width: clamp(140px, 18vw, 200px);
+    border: 1px solid var(--line-gold);
+    box-shadow: 0 20px 50px -20px rgba(0,0,0,0.5);
+  }
+  .story__portrait-wrap img { width: 100%; display: block; filter: sepia(0.2) contrast(1.05); }
+  .story__portrait-cap {
+    background: var(--midnight); color: var(--gold);
+    font-size: 0.5rem; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; padding: 0.45rem 0.6rem; text-align: center;
+  }
+</style>
+</head>
+<body class="slide-page">
+<main class="slide">
+  <div class="slide__body">
+    {% set page = report.backstory.pages[pageIndex] %}
+    <section class="story">
+      <div class="story__text">
+        <span class="kicker">{{ page.kicker }}</span>
+        <h2 class="display">{{ page.headline | safe }}</h2>
+        <p class="story__body">{{ page.body }}</p>
+        <div class="story__stats">
+          {% for stat in page.stats %}
+          <div class="story__stat">
+            <div class="v">{{ stat.value }}</div>
+            <div class="l">{{ stat.label }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="story__visual">
+        <div class="story__img" style="background-image:url('{{ page.image }}');"></div>
+        {% if pageIndex == 0 %}
+        <div class="story__portrait-wrap">
+          <img src="{{ report.backstory.alterEgo.portrait }}" alt="{{ report.backstory.alterEgo.name }}" />
+          <div class="story__portrait-cap">{{ report.backstory.alterEgo.name }} · {{ report.backstory.alterEgo.era }}</div>
+        </div>
+        {% endif %}
+      </div>
+    </section>
+  </div>
+  {% include "chrome.njk" %}
+</main>
+<script src="assets/js/report.js"></script>
+</body>
+</html>

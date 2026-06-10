@@ -1,0 +1,248 @@
+{
+  "meta": {
+    "brand": "Ancestry · Decoded",
+    "reportTitle": "Ancestry Decoded",
+    "titlePrimary": "Ancestry",
+    "titleAccent": "Decoded",
+    "tagline": "A forensic analysis of your facial architecture and its comparative historical distribution.",
+    "institute": "The Heritage Institute",
+    "year": "MMXXVI",
+    "footer": "Forensic Phenotype Report",
+    "slideCount": 15,
+    "subjectName": "Subject Report"
+  },
+  "images": {
+    "toc": "https://images.unsplash.com/photo-1454942901704-3c44c11b2ad1?w=1800&q=80&auto=format&fit=crop",
+    "portrait": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80&auto=format&fit=crop",
+    "mapBase": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/World_map_-_low_resolution.svg/1280px-World_map_-_low_resolution.svg.png",
+    "alterEgoPortrait": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=900&q=80&auto=format&fit=crop&sat=-30",
+    "villageScene": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=80&auto=format&fit=crop",
+    "marketScene": "https://images.unsplash.com/photo-1548013146-72479768bada?w=1400&q=80&auto=format&fit=crop",
+    "dailyLife": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400&q=80&auto=format&fit=crop"
+  },
+  "toc": {
+    "kicker": "Forensic Phenotype Analysis",
+    "slides": [
+      { "num": 1, "title": "Ancestry Decoded", "label": "Cover" },
+      { "num": 2, "title": "Analysis Results", "label": "Results" },
+      { "num": 3, "title": "Facial Feature Breakdown", "label": "Section" },
+      { "num": 4, "title": "Face Shape", "label": "Morphology" },
+      { "num": 5, "title": "Nose Shape", "label": "Morphology" },
+      { "num": 6, "title": "Eyes & Eyelids", "label": "Morphology" },
+      { "num": 7, "title": "Lips", "label": "Morphology" },
+      { "num": 8, "title": "Cheekbones, Brow & Jaw", "label": "Morphology" },
+      { "num": 9, "title": "Backstory", "label": "Section" },
+      { "num": 10, "title": "Your Historical Mirror", "label": "Backstory" },
+      { "num": 11, "title": "The Settlement", "label": "Backstory" },
+      { "num": 12, "title": "Trade & Sustenance", "label": "Backstory" },
+      { "num": 13, "title": "A Day in That Life", "label": "Backstory" },
+      { "num": 14, "title": "Forensic Summary", "label": "Summary" },
+      { "num": 15, "title": "Methodological Notice", "label": "Notice" }
+    ]
+  },
+  "cover": {
+    "kicker": "Forensic Phenotype Report"
+  },
+  "analysisResults": {
+    "kicker": "Analysis Results",
+    "headline": "Primary regional <em>affinity</em> identified.",
+    "topRegion": "Eastern Mediterranean Basin",
+    "matchScore": 87,
+    "matchLabel": "Morphological affinity index",
+    "mapHighlight": {
+      "x": 54,
+      "y": 42,
+      "radius": 11
+    },
+    "overview": "Your facial measurements were compared against 34 documented reference populations held in the Institute's comparative craniometric and soft-tissue archive. The strongest correspondence appears in the Eastern Mediterranean Basin — a region whose populations show consistent mid-facial breadth, moderate nasal projection, and balanced palpebral geometry across archaeological and living samples.",
+    "featureOverview": [
+      {
+        "term": "Facial index",
+        "plain": "The ratio of face length to face width. Yours falls in the mesoprosopic range — neither markedly long nor broad, a proportion common across Anatolian and Levantine reference groups."
+      },
+      {
+        "term": "Nasal index",
+        "plain": "Nose width relative to nose height. Your value suggests a leptorrhine tendency — a relatively narrow nasal bridge frequently recorded in coastal Mediterranean phenotypes."
+      },
+      {
+        "term": "Intercanthal ratio",
+        "plain": "The spacing between the inner corners of the eyes compared with eye width. Your measurement sits within the population mean for the matched region."
+      },
+      {
+        "term": "Zygomatic projection",
+        "plain": "How far the cheekbones extend sideways from the face. Moderate projection of this kind often correlates with the matched reference set."
+      }
+    ]
+  },
+  "sections": {
+    "features": {
+      "number": 1,
+      "kicker": "Section I",
+      "headline": "Facial Feature <em>Breakdown</em>",
+      "subtitle": "A systematic review of the morphological traits measured in your analysis — each examined against regional reference data."
+    },
+    "backstory": {
+      "number": 2,
+      "kicker": "Section II",
+      "headline": "<em>Backstory</em>",
+      "subtitle": "Where forensic morphology meets historical imagination — a narrative portrait drawn from your strongest regional correspondence."
+    }
+  },
+  "facialFeatures": [
+    {
+      "id": "face-shape",
+      "kicker": "Morphology · 01",
+      "title": "Face Shape",
+      "diagram": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80&auto=format&fit=crop&crop=faces",
+      "diagramCaption": "Frontal contour · measured",
+      "description": "Your face presents a mesoprosopic outline — the vertical and horizontal dimensions are near equilibrium, producing an oval-to-rounded contour rather than an elongated or square profile. This proportion is one of the more stable markers in the Eastern Mediterranean reference cohort.",
+      "metrics": [
+        { "value": "88.4", "unit": "", "label": "Facial index", "note": "Length ÷ breadth × 100" },
+        { "value": "142", "unit": "mm", "label": "Bizygomatic width", "note": "Widest point across cheekbones" },
+        { "value": "182", "unit": "mm", "label": "Morphological face height", "note": "Hairline to chin base" },
+        { "value": "Meso-", "unit": "prosopic", "label": "Classification", "note": "Mid-range length-to-width ratio" }
+      ],
+      "interpretation": "In comparative studies, mesoprosopic faces dominate many Anatolian and Aegean samples from the Bronze Age through to modern coastal settlements."
+    },
+    {
+      "id": "nose",
+      "kicker": "Morphology · 02",
+      "title": "Nose Shape",
+      "diagram": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=800&q=80&auto=format&fit=crop&crop=faces",
+      "diagramCaption": "Nasal profile · lateral measure",
+      "description": "The nasal dorsum rises evenly from the radix without a pronounced hump or depression. Alar width remains proportionate to intercanthal distance, a pairing often used in forensic reconstruction to estimate geographic affinity.",
+      "metrics": [
+        { "value": "62.1", "unit": "", "label": "Nasal index", "note": "Breadth ÷ height × 100" },
+        { "value": "36", "unit": "mm", "label": "Nasal breadth", "note": "Widest alar span" },
+        { "value": "58", "unit": "mm", "label": "Nasal height", "note": "Nasion to tip" },
+        { "value": "Lepto-", "unit": "rrhine", "label": "Classification", "note": "Relatively narrow form" }
+      ],
+      "interpretation": "A leptorrhine nasal index aligns with 71% of reference samples from the matched Eastern Mediterranean cluster."
+    },
+    {
+      "id": "eyes",
+      "kicker": "Morphology · 03",
+      "title": "Eyes & Eyelids",
+      "diagram": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&auto=format&fit=crop&crop=faces",
+      "diagramCaption": "Palpebral region · anterior view",
+      "description": "The palpebral fissure — the visible opening between the eyelids — is horizontally oriented with a gentle taper at the lateral canthus. No epicanthic fold is present. Upper eyelid exposure is moderate, indicating a standard open palpebral aperture.",
+      "metrics": [
+        { "value": "28.2", "unit": "mm", "label": "Fissure length", "note": "Inner to outer canthus" },
+        { "value": "11.4", "unit": "mm", "label": "Fissure height", "note": "Maximum lid separation" },
+        { "value": "3.42", "unit": "", "label": "Intercanthal index", "note": "Eye spacing ÷ fissure length" },
+        { "value": "Absent", "unit": "", "label": "Epicanthic fold", "note": "No medial lid covering" }
+      ],
+      "interpretation": "Almond-lidded morphology with balanced intercanthal spacing is repeatedly documented in Levantine and western Anatolian portrait art from the Hellenistic period onward."
+    },
+    {
+      "id": "lips",
+      "kicker": "Morphology · 04",
+      "title": "Lips",
+      "diagram": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&q=80&auto=format&fit=crop&crop=faces",
+      "diagramCaption": "Labial region · vermilion border",
+      "description": "The upper and lower vermilion zones show medium fullness with a defined philtral ridge — the vertical groove between nose and upper lip. Cupid's bow curvature is present but not exaggerated, consistent with the matched population mean.",
+      "metrics": [
+        { "value": "52", "unit": "mm", "label": "Mouth width", "note": "Commissure to commissure" },
+        { "value": "9.8", "unit": "mm", "label": "Upper lip height", "note": "Vermilion only" },
+        { "value": "11.2", "unit": "mm", "label": "Lower lip height", "note": "Vermilion only" },
+        { "value": "1.14", "unit": "", "label": "Labial ratio", "note": "Lower ÷ upper vermilion" }
+      ],
+      "interpretation": "Balanced labial ratios of this kind appear frequently in ceramic and mosaic portraiture from coastal trade settlements of the matched region."
+    },
+    {
+      "id": "cheekbones",
+      "kicker": "Morphology · 05",
+      "title": "Cheekbones, Brow & Jaw",
+      "diagram": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&q=80&auto=format&fit=crop&crop=faces",
+      "diagramCaption": "Mid & lower face · structural axes",
+      "description": "Zygomatic arches project moderately, lending lateral definition without the high, sharp angularity seen in some northern European samples. The brow ridge is low with a gentle supraorbital contour. The mandible terminates in a soft gonial angle, producing a tapered lower face rather than a square jaw.",
+      "metrics": [
+        { "value": "Moderate", "unit": "", "label": "Zygomatic projection", "note": "Lateral cheekbone prominence" },
+        { "value": "125°", "unit": "", "label": "Gonial angle", "note": "Angle at the jaw corner" },
+        { "value": "Low", "unit": "", "label": "Brow ridge", "note": "Supraorbital prominence" },
+        { "value": "Tapered", "unit": "", "label": "Mandibular contour", "note": "Lower face outline" }
+      ],
+      "interpretation": "Taken together, moderate cheekbone projection, low brow, and a tapered jaw form a composite frequently recovered in osteological material from Hellenistic-era Anatolian towns."
+    }
+  ],
+  "backstory": {
+    "alterEgo": {
+      "name": "Kallias of Smyrna",
+      "era": "c. 280 BCE",
+      "role": "Scribe and weights-master",
+      "portrait": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=900&q=80&auto=format&fit=crop&sat=-20",
+      "intro": "If your measured morphology were traced along its strongest regional thread, it might converge on a figure like Kallias — not an ancestor in the genealogical sense, but a historical type: a Greek-speaking scribe in the Ionian port of Smyrna, when the city stood at the crossroads of Aegean grain routes and overland caravan traffic."
+    },
+    "pages": [
+      {
+        "kicker": "Historical Mirror · I",
+        "headline": "A face the archive <em>recognises</em>",
+        "body": "Kallias kept the market ledger for the agora's western colonnade — recording amphorae of oil, bales of dyed wool, and the seasonal price of salt fish. His face, reconstructed here from period portraiture and osteological reference, shares your mesoprosopic proportions, nasal index, and palpebral geometry within the margin of population-level correspondence.",
+        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=900&q=80&auto=format&fit=crop&sat=-20",
+        "stats": [
+          { "value": "c. 280 BCE", "label": "Estimated period" },
+          { "value": "Smyrna", "label": "Ionian port city" },
+          { "value": "Scribe", "label": "Recorded occupation" }
+        ]
+      },
+      {
+        "kicker": "Historical Mirror · II",
+        "headline": "The <em>settlement</em>",
+        "body": "Smyrna in this period housed roughly twelve to fifteen thousand people within its walls — a modest city by imperial standards, but dense by Aegean measure. Most residents lived in stacked mud-brick and timber houses above ground-floor workshops. Kallias would have known his neighbours by voice, smell of cooking smoke, and the rhythm of harbour bells.",
+        "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=80&auto=format&fit=crop",
+        "stats": [
+          { "value": "~14,000", "label": "Estimated population" },
+          { "value": "42 ha", "label": "Walled city area" },
+          { "value": "3", "label": "Major harbour basins" }
+        ]
+      },
+      {
+        "kicker": "Historical Mirror · III",
+        "headline": "Trade & <em>sustenance</em>",
+        "body": "The Ionian diet rested on barley bread, dried figs, olives, and small fish from the gulf. Wealthier households added goat cheese and wine diluted for midday meals. Smyrna's economy turned on weighing and recording — olive oil for export, purple dye from the south, timber from the Maeander valley. Kallias's craft was trust made visible in wax tablets and stamped lead weights.",
+        "image": "https://images.unsplash.com/photo-1548013146-72479768bada?w=1400&q=80&auto=format&fit=crop",
+        "stats": [
+          { "value": "Barley & fig", "label": "Staple daily foods" },
+          { "value": "Oil & wool", "label": "Primary export goods" },
+          { "value": "Weights-master", "label": "Guild-linked trade role" }
+        ]
+      },
+      {
+        "kicker": "Historical Mirror · IV",
+        "headline": "A day in <em>that</em> life",
+        "body": "Kallias rose before dawn to check the scales in the agora, correcting for humidity that could throw off a merchant's measure. By mid-morning the colonnade filled with sellers disputing tallies; he adjudicated with reference to the city standard kept in the temple vestibule. Afternoons were for copying contracts in a shaded scriptorium. At dusk he walked the harbour wall, listening for the wind that meant grain ships would arrive by morning.",
+        "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400&q=80&auto=format&fit=crop",
+        "stats": [
+          { "value": "05:30", "label": "Typical rising hour" },
+          { "value": "Agora", "label": "Primary workplace" },
+          { "value": "Harbour", "label": "Evening walk & news" }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "kicker": "Forensic Summary",
+    "headline": "Your morphology, <em>read</em> in full.",
+    "paragraphs": [
+      "Across five measured trait groups, your facial architecture shows its strongest aggregate correspondence with the Eastern Mediterranean Basin — particularly the Ionian and Levantine coastal reference populations. Facial index, nasal form, palpebral geometry, labial proportions, and mid-to-lower facial structure all contribute to this classification.",
+      "No single measurement determines the result. The analysis weights multiple soft-tissue landmarks and derives a composite affinity score of 87 on the Institute's morphological index. Secondary correspondences appear in the central Balkans and western Anatolia, reflecting the historical intermixture of populations along Aegean trade corridors.",
+      "The backstory narrative is interpretive — a cultural and historical sketch tied to your primary regional match. It is offered as context, not genealogical proof."
+    ],
+    "highlights": [
+      { "label": "Primary match", "value": "Eastern Mediterranean" },
+      { "label": "Affinity index", "value": "87 / 100" },
+      { "label": "Traits analysed", "value": "5 groups" },
+      { "label": "Reference populations", "value": "34" }
+    ]
+  },
+  "methodologicalNotice": {
+    "kicker": "Methodological Notice",
+    "headline": "On the limits of <em>forensic</em> comparison.",
+    "paragraphs": [
+      "This report compares your facial measurements against published anthropometric reference ranges and archaeological reconstruction data. Results express statistical affinity — how closely your morphology resembles documented population means — not certitude of origin, ethnicity, or direct descent.",
+      "Measurement error, photographic angle, lighting, and the incomplete nature of historical reference material all introduce uncertainty. Regional boundaries in the past were porous; populations moved, intermarried, and changed across generations. A strong match to one region does not exclude contributions from elsewhere.",
+      "The historical narrative in Section II is a creative reconstruction informed by your primary regional correspondence. It is not a claim that you are descended from any specific individual, settlement, or time period.",
+      "This analysis is intended for personal and educational use. It should not be used for medical diagnosis, legal identification, employment decisions, or any purpose requiring verified biometric evidence. If you have questions about how your data was processed or wish to request deletion of source imagery, contact the issuing institute directly."
+    ]
+  }
+}

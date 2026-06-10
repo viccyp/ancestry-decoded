@@ -1,0 +1,71 @@
+---
+pageTitle: Contents
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include "head.njk" %}
+<style>
+  .toc { display:grid; grid-template-columns: 0.92fr 1.08fr; height:100%; }
+  .toc__left { position:relative; overflow:hidden; color: var(--cream); display:flex; }
+  .toc__left .bleed { z-index:0; }
+  .toc__left .panel { position:relative; z-index:3; padding: var(--margin); display:flex; flex-direction:column; justify-content:space-between; }
+  .toc__left h1 { margin:0; }
+  .toc__left h1 .accent { display:block; }
+  .toc__sub { margin-top:1.4rem; max-width:34ch; font-family: var(--serif); font-style:italic; font-size: clamp(1.05rem,1.5vw,1.35rem); color: rgba(249,248,244,0.82); line-height:1.5; }
+  .toc__meta { font-size:0.62rem; letter-spacing:0.24em; text-transform:uppercase; color: rgba(249,248,244,0.7); display:flex; gap:1.6rem; }
+  .toc__meta b { color: var(--gold); }
+
+  .toc__right { background: var(--cream); padding: var(--margin); display:flex; flex-direction:column; justify-content:center; overflow-y: auto; }
+  .toc__right .kicker { margin-bottom: clamp(1rem,2.4vh,1.8rem); }
+  .toc__list { list-style:none; margin:0; padding:0; }
+  .toc__list li a { display:grid; grid-template-columns: auto 1fr auto; align-items:center; gap:1.2rem; padding: clamp(0.4rem,1vh,0.7rem) 0; border-top:1px solid var(--line); transition: all 0.25s ease; }
+  .toc__list li:last-child a { border-bottom:1px solid var(--line); }
+  .toc__list li a:hover { padding-left:0.6rem; color: var(--orange); }
+  .toc__list .n { font-family: var(--serif); font-size:0.9rem; color: var(--gold); width:2ch; }
+  .toc__list .t { font-family: var(--serif); font-size: clamp(0.95rem,1.3vw,1.2rem); font-weight:500; }
+  .toc__list .k { font-size:0.55rem; letter-spacing:0.2em; text-transform:uppercase; color: var(--ink-40); }
+  .toc__list li a:hover .k { color: var(--orange); }
+  .toc__cta { margin-top: clamp(1.2rem,2.5vh,2rem); display:flex; align-items:center; gap:1.2rem; }
+  .toc__cta a.begin { display:inline-flex; align-items:center; gap:0.8rem; background: var(--forest); color: var(--cream); padding:0.95rem 1.6rem; font-size:0.66rem; font-weight:700; letter-spacing:0.24em; text-transform:uppercase; transition: background 0.25s ease; }
+  .toc__cta a.begin:hover { background: var(--orange); }
+  .toc__cta span { font-size:0.62rem; letter-spacing:0.18em; text-transform:uppercase; color: var(--ink-40); }
+</style>
+</head>
+<body>
+<main class="slide">
+  <section class="toc">
+    <div class="toc__left">
+      <div class="bleed bleed--grade" style="background-image:url('{{ report.images.toc }}');"></div>
+      <div class="overlay overlay--full"></div>
+      <div class="overlay overlay--vignette"></div>
+      <div class="panel">
+        <span class="kicker kicker--plain" style="color:var(--gold);">{{ report.toc.kicker }} · {{ report.meta.year }}</span>
+        <div>
+          <h1 class="display">{{ report.meta.titlePrimary }}<br /><span class="accent">{{ report.meta.titleAccent }}</span></h1>
+          <p class="toc__sub">{{ report.meta.tagline }}</p>
+        </div>
+        <div class="toc__meta">
+          <span>{{ report.meta.slideCount }} <b>Plates</b></span>
+          <span>Forensic <b>Analysis</b></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="toc__right">
+      <span class="kicker">Table of Contents</span>
+      <ul class="toc__list">
+        {% for slide in report.toc.slides %}
+        <li><a href="slide-{{ slide.num | padSlide }}.html"><span class="n">{{ slide.num | padSlide }}</span><span class="t">{{ slide.title }}</span><span class="k">{{ slide.label }}</span></a></li>
+        {% endfor %}
+      </ul>
+      <div class="toc__cta">
+        <a class="begin" href="slide-01.html">Begin the Report &#8594;</a>
+        <span>Use &#8592; &#8594; to navigate</span>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="assets/js/report.js"></script>
+</body>
+</html>

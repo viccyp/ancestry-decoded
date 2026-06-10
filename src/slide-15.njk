@@ -1,0 +1,55 @@
+---
+permalink: slide-15.html
+pageTitle: Methodological Notice
+slideNum: 15
+chromeLabel: Notice
+chromeTheme: dark
+prevHref: slide-14.html
+nextHref: index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include "head.njk" %}
+<style>
+  .notice {
+    flex: 1;
+    padding: calc(var(--margin) + 0.8rem) var(--margin) var(--margin);
+    max-width: 72ch;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .notice h2 { margin: 0.7rem 0 1.6rem; max-width: 20ch; color: var(--cream); }
+  .notice h2 em { color: var(--gold); }
+  .notice p {
+    font-size: 0.8rem; line-height: 1.8;
+    color: rgba(249,248,244,0.78);
+    margin: 0 0 1.1rem;
+  }
+  .notice__rule {
+    width: 48px; height: 1px; background: var(--gold);
+    margin: 0 0 1.4rem;
+  }
+  .slide.notice-slide { background: var(--midnight); color: var(--cream); }
+</style>
+</head>
+<body class="slide-page">
+<main class="slide notice-slide">
+  <div class="slide__body">
+    <section class="notice">
+      <span class="kicker" style="color:var(--gold);">{{ report.methodologicalNotice.kicker }}</span>
+      <h2 class="display">{{ report.methodologicalNotice.headline | safe }}</h2>
+      <div class="notice__rule"></div>
+      {% for p in report.methodologicalNotice.paragraphs %}
+      <p>{{ p }}</p>
+      {% endfor %}
+    </section>
+  </div>
+  {% include "chrome.njk" %}
+</main>
+<div class="hint">Press Home to return to contents</div>
+<script src="assets/js/report.js"></script>
+</body>
+</html>

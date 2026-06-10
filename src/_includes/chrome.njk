@@ -1,0 +1,16 @@
+<div class="chrome chrome--{{ chromeTheme }}">
+  <div class="chrome__row chrome__row--top">
+    <span class="brandmark"><span class="dot"></span> {{ report.meta.brand }}</span>
+    <span class="chrome__label">{{ chromeLabel }}</span>
+  </div>
+  <div class="chrome__row chrome__row--bottom">
+    <span class="chrome__foot">{{ report.meta.footer }}</span>
+    <div class="pager">
+      <span class="pager__count"><b>{{ slideNum | padSlide }}</b> <span>/ {{ report.meta.slideCount }}</span></span>
+      <div class="pager__arrows">
+        <a id="nav-prev" class="pager__btn" {% if not prevHref %}aria-disabled="true"{% endif %} href="{{ prevHref }}">&#8592;</a>
+        <a id="nav-next" class="pager__btn" href="{{ nextHref }}">&#8594;</a>
+      </div>
+    </div>
+  </div>
+</div>
