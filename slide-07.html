@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ancestry Decoded — Global Insights</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/report.css" />
+<style>
+  .slide.dark { background: var(--midnight); color: var(--cream); }
+  .gi__bg { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0.16; z-index:0; }
+  .gi { position:relative; z-index:2; height:100%; padding: calc(var(--margin) + 0.4rem) var(--margin) var(--margin); display:grid; grid-template-columns: 0.92fr 1.08fr; gap: clamp(2rem,5vw,4.5rem); align-items:center; }
+
+  .gi__left .kicker { margin-bottom: 1.2rem; }
+  .gi__left h2 { color: var(--cream); margin: 0 0 1.4rem; }
+  .gi__left h2 em { color: var(--gold); }
+  .gi__left .lede { color: rgba(249,248,244,0.7); max-width: 34ch; }
+  .gi__kpis { display:flex; gap: clamp(1.4rem,3vw,2.6rem); margin-top: clamp(1.6rem,3vh,2.4rem); }
+  .gi__kpis .k .n { font-family: var(--serif); font-size: clamp(2.1rem,3.2vw,3rem); color: var(--gold); line-height:1; }
+  .gi__kpis .k .l { font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color: rgba(249,248,244,0.55); margin-top:0.5rem; }
+
+  .gi__panel { border:1px solid rgba(212,175,55,0.28); padding: clamp(1.6rem,2.6vw,2.4rem); background: rgba(255,255,255,0.02); }
+  .gi__panel h3 { font-family: var(--sans); font-size:0.66rem; font-weight:700; letter-spacing:0.24em; text-transform:uppercase; color: var(--gold); margin:0 0 1.5rem; display:flex; justify-content:space-between; }
+  .gi__panel h3 span { color: rgba(249,248,244,0.5); font-weight:500; }
+
+  .bar { margin-bottom: 1.15rem; }
+  .bar:last-child { margin-bottom:0; }
+  .bar__top { display:flex; justify-content:space-between; font-size:0.78rem; margin-bottom:0.5rem; }
+  .bar__top .v { font-family: var(--serif); color: var(--gold); font-size:0.95rem; }
+  .bar__track { height:6px; background: rgba(255,255,255,0.09); border-radius:99px; overflow:hidden; }
+  .bar__fill { height:100%; border-radius:99px; background: linear-gradient(90deg, var(--bronze), var(--gold)); }
+
+  .gi__split { display:grid; grid-template-columns: auto 1fr; gap: clamp(1.5rem,3vw,2.4rem); align-items:center; margin-top: clamp(1.4rem,2.6vh,2rem); }
+  .donut { width: clamp(120px,13vw,160px); height: clamp(120px,13vw,160px); transform: rotate(-90deg); }
+  .donut__hole { transform: rotate(90deg); }
+  .legend { font-size:0.74rem; }
+  .legend li { list-style:none; display:flex; align-items:center; gap:0.6rem; padding:0.32rem 0; color: rgba(249,248,244,0.78); }
+  .legend li .sw { width:10px; height:10px; border-radius:2px; flex:none; }
+  .legend li b { color: var(--cream); font-weight:600; margin-left:auto; font-family: var(--serif); font-size:0.95rem; }
+  .donut-wrap { position:relative; display:grid; place-items:center; }
+  .donut-wrap .ctr { position:absolute; text-align:center; }
+  .donut-wrap .ctr b { display:block; font-family: var(--serif); font-size: clamp(1.4rem,2vw,1.9rem); color: var(--gold); line-height:1; }
+  .donut-wrap .ctr span { font-size:0.52rem; letter-spacing:0.2em; text-transform:uppercase; color: rgba(249,248,244,0.55); }
+</style>
+</head>
+<body class="slide-page">
+<main class="slide dark">
+  <div class="gi__bg" style="background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=2000&q=80&auto=format&fit=crop');"></div>
+  <div class="slide__body">
+    <section class="gi">
+      <div class="gi__left">
+        <span class="kicker">Global Insights</span>
+        <h2 class="display">The World, Written <em>Within Us</em></h2>
+        <p class="lede">Aggregated from 1.4 million anonymised genomes, the data reveals a humanity far more interwoven than borders suggest.</p>
+        <div class="gi__kpis">
+          <div class="k"><div class="n">7.4&times;</div><div class="l">More admixture<br />than in 1950</div></div>
+          <div class="k"><div class="n">41</div><div class="l">Nations<br />surveyed</div></div>
+          <div class="k"><div class="n">94%</div><div class="l">Carry &gt;3<br />ancestral regions</div></div>
+        </div>
+      </div>
+
+      <div class="gi__panel">
+        <h3>Ancestral Composition <span>By region · mean %</span></h3>
+        <div class="bar"><div class="bar__top"><span>European</span><span class="v">38%</span></div><div class="bar__track"><div class="bar__fill" style="width:38%"></div></div></div>
+        <div class="bar"><div class="bar__top"><span>Sub-Saharan African</span><span class="v">27%</span></div><div class="bar__track"><div class="bar__fill" style="width:27%"></div></div></div>
+        <div class="bar"><div class="bar__top"><span>South &amp; East Asian</span><span class="v">21%</span></div><div class="bar__track"><div class="bar__fill" style="width:21%"></div></div></div>
+        <div class="bar"><div class="bar__top"><span>Indigenous Americas</span><span class="v">9%</span></div><div class="bar__track"><div class="bar__fill" style="width:9%"></div></div></div>
+        <div class="bar"><div class="bar__top"><span>Oceanian &amp; Other</span><span class="v">5%</span></div><div class="bar__track"><div class="bar__fill" style="width:5%"></div></div></div>
+
+        <div class="gi__split">
+          <div class="donut-wrap">
+            <svg class="donut" viewBox="0 0 36 36">
+              <circle cx="18" cy="18" r="15.9" fill="none" stroke="rgba(255,255,255,0.09)" stroke-width="3.4"></circle>
+              <circle cx="18" cy="18" r="15.9" fill="none" stroke="#D4AF37" stroke-width="3.4" stroke-dasharray="68 100" stroke-linecap="round"></circle>
+              <circle cx="18" cy="18" r="15.9" fill="none" stroke="#A97142" stroke-width="3.4" stroke-dasharray="22 100" stroke-dashoffset="-68" stroke-linecap="round"></circle>
+              <circle cx="18" cy="18" r="15.9" fill="none" stroke="#2C5545" stroke-width="3.4" stroke-dasharray="10 100" stroke-dashoffset="-90" stroke-linecap="round"></circle>
+            </svg>
+            <div class="ctr"><b>68%</b><span>Cross-region</span></div>
+          </div>
+          <ul class="legend" style="margin:0;padding:0;">
+            <li><span class="sw" style="background:#D4AF37"></span> Multi-continental heritage <b>68%</b></li>
+            <li><span class="sw" style="background:#A97142"></span> Two-region heritage <b>22%</b></li>
+            <li><span class="sw" style="background:#2C5545"></span> Single-region heritage <b>10%</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="chrome chrome--dark">
+    <div class="chrome__row chrome__row--top">
+      <span class="brandmark"><span class="dot"></span> Ancestry · Decoded</span>
+      <span class="chrome__label">Global Insights</span>
+    </div>
+    <div class="chrome__row chrome__row--bottom">
+      <span class="chrome__foot">Heritage Intelligence Report</span>
+      <div class="pager">
+        <span class="pager__count"><b>07</b> <span>/ 10</span></span>
+        <div class="pager__arrows">
+          <a id="nav-prev" class="pager__btn" href="slide-06.html">&#8592;</a>
+          <a id="nav-next" class="pager__btn" href="slide-08.html">&#8594;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="assets/js/report.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ancestry Decoded — Feature Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/report.css" />
+<style>
+  .feat { position: relative; height: 100%; }
+  .feat__img { position: absolute; inset: 0 0 0 auto; width: 64%; background-size: cover; background-position: center; }
+  .feat__img::after { content:""; position:absolute; inset:0; background: linear-gradient(90deg, var(--cream) 0%, rgba(249,248,244,0.0) 26%); }
+  .feat__band { position: absolute; inset: 0 64% 0 0; background: var(--cream); }
+
+  .feat__card {
+    position: absolute; z-index: 5;
+    left: var(--margin); top: 50%; transform: translateY(-50%);
+    width: clamp(330px, 42vw, 520px);
+    background: var(--cream);
+    border: 1px solid var(--line);
+    box-shadow: 0 50px 90px -45px rgba(0,0,0,0.6);
+    padding: clamp(2rem, 3.2vw, 3rem);
+  }
+  .feat__card::before { content:""; position:absolute; left:0; top:0; width:4px; height:100%; background: var(--forest); }
+  .feat__card .kicker { margin-bottom: 1.3rem; }
+  .feat__card h2 { margin: 0 0 1.1rem; }
+  .feat__card h2 .accent { display:block; }
+  .feat__byline { display:flex; align-items:center; gap:0.8rem; margin: 1.4rem 0 1.2rem; }
+  .feat__byline .av { width: 40px; height:40px; border-radius:50%; background-size:cover; background-position:center; border:1px solid var(--line-gold); flex:none; }
+  .feat__byline .who { font-family: var(--sans); }
+  .feat__byline .who b { display:block; font-size:0.8rem; letter-spacing:0.02em; }
+  .feat__byline .who span { font-size:0.62rem; letter-spacing:0.22em; text-transform:uppercase; color: var(--bronze); }
+  .feat__quote { position: absolute; right: clamp(2rem,4vw,4rem); bottom: clamp(4.5rem,9vh,6rem); z-index: 4; max-width: 30ch; text-align: right; color: var(--cream); }
+  .feat__quote p { font-family: var(--serif); font-style: italic; font-size: clamp(1.1rem,1.7vw,1.5rem); line-height: 1.4; margin: 0; text-shadow: 0 2px 20px rgba(0,0,0,0.6); }
+</style>
+</head>
+<body class="slide-page">
+<main class="slide">
+  <div class="slide__body">
+    <section class="feat">
+      <div class="feat__band"></div>
+      <div class="feat__img" style="background-image:url('https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=1800&q=80&auto=format&fit=crop');"></div>
+
+      <article class="feat__card">
+        <span class="kicker">Feature Story &nbsp;·&nbsp; Field Report</span>
+        <h2 class="display">The Keepers<br /><span class="accent"><em>of Memory</em></span></h2>
+        <p class="body" style="margin:0;">In a mountain village where no birth was ever written down, one family has kept its lineage alive for three hundred years — recited aloud, name by name, each midwinter. We spent a season learning how memory becomes an archive when paper never arrives.</p>
+        <div class="feat__byline">
+          <span class="av" style="background-image:url('https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=70&auto=format&fit=crop');"></span>
+          <span class="who"><b>Elena Marchetti</b><span>Lead Field Researcher</span></span>
+        </div>
+        <hr class="rule rule--gold" />
+        <p class="body" style="margin-top:1rem; font-size:0.78rem;">Eight weeks · Forty-one interviews · One unbroken line of inheritance.</p>
+      </article>
+
+      <div class="feat__quote">
+        <p>"We do not own our names. We are merely the latest to carry them."</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="chrome chrome--light">
+    <div class="chrome__row chrome__row--top">
+      <span class="brandmark"><span class="dot"></span> Ancestry · Decoded</span>
+      <span class="chrome__label">Feature Story</span>
+    </div>
+    <div class="chrome__row chrome__row--bottom">
+      <span class="chrome__foot">Heritage Intelligence Report</span>
+      <div class="pager">
+        <span class="pager__count"><b>05</b> <span>/ 10</span></span>
+        <div class="pager__arrows">
+          <a id="nav-prev" class="pager__btn" href="slide-04.html">&#8592;</a>
+          <a id="nav-next" class="pager__btn" href="slide-06.html">&#8594;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="assets/js/report.js"></script>
+</body>
+</html>

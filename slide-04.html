@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ancestry Decoded — Then &amp; Now</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/report.css" />
+<style>
+  .cmp { position: relative; display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+  .cmp__half { position: relative; overflow: hidden; }
+  .cmp__img { position: absolute; inset: 0; background-size: cover; background-position: center; }
+  .cmp__img--past { filter: sepia(0.55) contrast(0.95) brightness(0.92) saturate(0.8); }
+  .cmp__shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,20,26,0.85), rgba(14,20,26,0.15) 55%, rgba(14,20,26,0) 100%); }
+  .cmp__content { position: absolute; left: clamp(2rem,4vw,4rem); right: clamp(2rem,4vw,4rem); bottom: clamp(4.5rem,9vh,6.5rem); color: var(--cream); z-index: 3; }
+  .cmp__yr { font-family: var(--serif); font-size: clamp(2.4rem,4vw,3.6rem); line-height: 1; color: var(--gold); }
+  .cmp__content h3 { margin: 0.6rem 0 0.7rem; font-family: var(--serif); font-weight: 500; font-size: clamp(1.5rem,2.4vw,2.1rem); line-height: 1.08; max-width: 18ch; }
+  .cmp__content p { margin: 0; font-size: 0.84rem; line-height: 1.7; color: rgba(249,248,244,0.82); max-width: 38ch; }
+
+  /* centre divider + badge */
+  .cmp__divider { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; transform: translateX(-50%); background: var(--orange); z-index: 6; }
+  .cmp__badge {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 7;
+    width: clamp(80px,9vw,112px); aspect-ratio: 1; border-radius: 50%;
+    background: var(--cream); color: var(--midnight);
+    display: grid; place-items: center; text-align: center;
+    box-shadow: 0 18px 40px -18px rgba(0,0,0,0.6);
+    border: 1px solid var(--line-gold);
+  }
+  .cmp__badge span { font-family: var(--serif); font-style: italic; font-size: clamp(1rem,1.4vw,1.3rem); line-height: 1; }
+  .cmp__badge small { display:block; font-family: var(--sans); font-size: 0.5rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--orange); margin-top: 0.3rem; }
+
+  .cmp__tag { position: absolute; top: clamp(4.5rem,9vh,5.5rem); left: clamp(2rem,4vw,4rem); z-index: 3; }
+  .cmp__tag .tag { color: var(--gold); background: rgba(20,28,38,0.5); padding: 0.4rem 0.8rem; backdrop-filter: blur(4px); }
+</style>
+</head>
+<body class="slide-page">
+<main class="slide">
+  <div class="slide__body">
+    <section class="cmp">
+      <div class="cmp__half">
+        <div class="cmp__img cmp__img--past" style="background-image:url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1600&q=80&auto=format&fit=crop');"></div>
+        <div class="cmp__shade"></div>
+        <div class="cmp__tag"><span class="tag">Then · The Record Keeper</span></div>
+        <div class="cmp__content">
+          <div class="cmp__yr">1924</div>
+          <h3>Lineage held in ledgers, letters and the spoken word.</h3>
+          <p>For generations, ancestry survived only as far as memory and parish record allowed — fragile, partial, and easily lost to time.</p>
+        </div>
+      </div>
+
+      <div class="cmp__half">
+        <div class="cmp__img" style="background-image:url('https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=1600&q=80&auto=format&fit=crop');"></div>
+        <div class="cmp__shade"></div>
+        <div class="cmp__tag" style="left:auto; right:clamp(2rem,4vw,4rem);"><span class="tag">Now · The Decoded Self</span></div>
+        <div class="cmp__content" style="text-align:right;">
+          <div class="cmp__yr">2026</div>
+          <h3 style="margin-left:auto;">The genome restores what the archive forgot.</h3>
+          <p style="margin-left:auto;">Today a single sample reconstructs centuries of movement and kinship — returning lost branches to the family tree with startling precision.</p>
+        </div>
+      </div>
+
+      <div class="cmp__divider"></div>
+      <div class="cmp__badge"><div><span>vs.</span><small>A&nbsp;Century</small></div></div>
+    </section>
+  </div>
+
+  <div class="chrome chrome--dark">
+    <div class="chrome__row chrome__row--top">
+      <span class="brandmark"><span class="dot"></span> Ancestry · Decoded</span>
+      <span class="chrome__label">Comparison</span>
+    </div>
+    <div class="chrome__row chrome__row--bottom">
+      <span class="chrome__foot">Heritage Intelligence Report</span>
+      <div class="pager">
+        <span class="pager__count"><b>04</b> <span>/ 10</span></span>
+        <div class="pager__arrows">
+          <a id="nav-prev" class="pager__btn" href="slide-03.html">&#8592;</a>
+          <a id="nav-next" class="pager__btn" href="slide-05.html">&#8594;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="assets/js/report.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ancestry Decoded — Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/report.css" />
+<style>
+  .profile { padding: calc(var(--margin) + 0.6rem) var(--margin) var(--margin); align-items: center; text-align: center; }
+  .profile__head { margin-bottom: clamp(0.6rem, 2vh, 1.4rem); }
+  .profile__head h2 { margin-top: 0.7rem; }
+
+  .stage {
+    position: relative;
+    width: min(1080px, 92vw);
+    aspect-ratio: 5 / 3;
+    margin: 0 auto;
+  }
+  .stage__svg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
+
+  .orb {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+    width: clamp(190px, 26vw, 320px); aspect-ratio: 1; border-radius: 50%;
+    z-index: 3;
+    background-size: cover; background-position: center top;
+    box-shadow: 0 30px 60px -25px rgba(0,0,0,0.55);
+    border: 1px solid rgba(255,255,255,0.6);
+  }
+  .orb__ring {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+    width: calc(clamp(190px,26vw,320px) + 26px); aspect-ratio: 1; border-radius: 50%;
+    border: 1px solid var(--line-gold); z-index: 2;
+  }
+  .orb__cap {
+    position: absolute; left: 50%; bottom: -14px; transform: translateX(-50%);
+    background: var(--forest); color: var(--cream);
+    font-family: var(--sans); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase;
+    padding: 0.4rem 1rem; white-space: nowrap; z-index: 4;
+  }
+
+  .callout {
+    position: absolute; z-index: 4;
+    width: clamp(190px, 21vw, 248px);
+    background: var(--cream); border: 1px solid var(--line);
+    box-shadow: 0 22px 48px -32px rgba(0,0,0,0.5);
+    padding: 1.05rem 1.15rem; text-align: left;
+  }
+  .callout .tag { color: var(--gold); display: flex; align-items: center; gap: 0.5rem; }
+  .callout .tag::before { content:""; width: 5px; height: 5px; background: var(--forest); border-radius: 50%; }
+  .callout h4 { margin: 0.55rem 0 0.4rem; font-family: var(--serif); font-size: 1.35rem; font-weight: 600; line-height: 1.05; }
+  .callout p { margin: 0; font-size: 0.76rem; line-height: 1.6; color: var(--ink-60); }
+  .callout .big { font-family: var(--serif); color: var(--forest); font-size: 1.05rem; }
+
+  .c-tl { left: 0;   top: 7%; }
+  .c-tr { right: 0;  top: 7%; }
+  .c-bl { left: 0;   bottom: 7%; }
+  .c-br { right: 0;  bottom: 7%; }
+</style>
+</head>
+<body class="slide-page">
+<main class="slide">
+  <div class="slide__body">
+    <section class="profile col" style="flex:1; justify-content:center;">
+      <div class="profile__head">
+        <span class="kicker kicker--plain">Subject Profile &nbsp;·&nbsp; Composite No. 7</span>
+        <h2 class="display">Anatomy of an <em>Ancestry</em></h2>
+      </div>
+
+      <div class="stage">
+        <svg class="stage__svg" viewBox="0 0 1000 600" preserveAspectRatio="none">
+          <g stroke="#D4AF37" stroke-width="1" vector-effect="non-scaling-stroke" fill="none" opacity="0.8">
+            <line x1="500" y1="300" x2="250" y2="150" />
+            <line x1="500" y1="300" x2="750" y2="150" />
+            <line x1="500" y1="300" x2="250" y2="450" />
+            <line x1="500" y1="300" x2="750" y2="450" />
+          </g>
+          <g fill="#D4AF37">
+            <circle cx="250" cy="150" r="3.5" vector-effect="non-scaling-stroke" />
+            <circle cx="750" cy="150" r="3.5" vector-effect="non-scaling-stroke" />
+            <circle cx="250" cy="450" r="3.5" vector-effect="non-scaling-stroke" />
+            <circle cx="750" cy="450" r="3.5" vector-effect="non-scaling-stroke" />
+          </g>
+        </svg>
+
+        <div class="orb__ring"></div>
+        <div class="orb" style="background-image:url('https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=900&q=80&auto=format&fit=crop');">
+          <span class="orb__cap">The Living Record</span>
+        </div>
+
+        <div class="callout c-tl">
+          <span class="tag">Genomic Origin</span>
+          <h4>Four bloodlines, one body</h4>
+          <p><span class="big">63%</span> Coastal European · <span class="big">24%</span> West African · <span class="big">13%</span> South Asian.</p>
+        </div>
+
+        <div class="callout c-tr">
+          <span class="tag">Migration Path</span>
+          <h4>Nine generations afar</h4>
+          <p>Movement across <span class="big">4</span> continents and <span class="big">12,400&nbsp;km</span> within recorded memory.</p>
+        </div>
+
+        <div class="callout c-bl">
+          <span class="tag">Linguistic Lineage</span>
+          <h4>Tongues of the line</h4>
+          <p>A single proto-language branching into <span class="big">5</span> living dialects still spoken at home.</p>
+        </div>
+
+        <div class="callout c-br">
+          <span class="tag">Cultural Inheritance</span>
+          <h4>What survives the years</h4>
+          <p><span class="big">17</span> traditions preserved intact; <span class="big">3</span> deliberately revived.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="chrome chrome--light">
+    <div class="chrome__row chrome__row--top">
+      <span class="brandmark"><span class="dot"></span> Ancestry · Decoded</span>
+      <span class="chrome__label">Profile</span>
+    </div>
+    <div class="chrome__row chrome__row--bottom">
+      <span class="chrome__foot">Heritage Intelligence Report</span>
+      <div class="pager">
+        <span class="pager__count"><b>03</b> <span>/ 10</span></span>
+        <div class="pager__arrows">
+          <a id="nav-prev" class="pager__btn" href="slide-02.html">&#8592;</a>
+          <a id="nav-next" class="pager__btn" href="slide-04.html">&#8594;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="assets/js/report.js"></script>
+</body>
+</html>

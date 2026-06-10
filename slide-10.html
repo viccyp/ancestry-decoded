@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ancestry Decoded — Closing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/report.css" />
+<style>
+  .close { color: var(--cream); }
+  .close__inner { position:relative; z-index:10; flex:1; min-height:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding: 0 var(--margin); }
+  .close__mark { width:46px; height:46px; border:1px solid var(--line-gold); border-radius:50%; display:grid; place-items:center; margin-bottom: clamp(1.6rem,3vh,2.4rem); }
+  .close__mark .dot { width:8px; height:8px; background: var(--gold); border-radius:50%; }
+  .close h2 { max-width: 20ch; }
+  .close h2 em { color: var(--gold); }
+  .close__line { width: 60px; height:1px; background: var(--gold); margin: clamp(1.6rem,3vh,2.4rem) 0; }
+  .close__stmt { font-family: var(--serif); font-style:italic; font-size: clamp(1.05rem,1.6vw,1.4rem); color: rgba(249,248,244,0.82); max-width: 40ch; line-height:1.5; }
+  .close__sig { margin-top: clamp(2.2rem,4vh,3.4rem); }
+  .close__sig .tag { color: var(--gold); display:block; margin-bottom:0.5rem; }
+  .close__sig p { margin:0; font-family: var(--serif); font-size:1.1rem; letter-spacing:0.04em; }
+</style>
+</head>
+<body class="slide-page">
+<main class="slide close">
+  <div class="bleed bleed--grade" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=2400&q=80&auto=format&fit=crop');"></div>
+  <div class="overlay overlay--full"></div>
+  <div class="overlay overlay--vignette"></div>
+
+  <div class="slide__body">
+    <div class="close__inner">
+      <div class="close__mark"><span class="dot"></span></div>
+      <span class="kicker kicker--plain" style="color:var(--gold);">In Closing</span>
+      <h2 class="display" style="margin-top:1rem;">Every life is the <em>continuation</em> of a story already underway.</h2>
+      <div class="close__line"></div>
+      <p class="close__stmt">We did not begin the lineage we carry, and we will not finish it. We are, each of us, a single luminous chapter — entrusted, for a while, with the telling.</p>
+      <div class="close__sig">
+        <span class="tag">Ancestry · Decoded — Volume I</span>
+        <p>The Heritage Institute &nbsp;·&nbsp; MMXXVI</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="chrome chrome--dark">
+    <div class="chrome__row chrome__row--top">
+      <span class="brandmark"><span class="dot"></span> Ancestry · Decoded</span>
+      <span class="chrome__label">Fin</span>
+    </div>
+    <div class="chrome__row chrome__row--bottom">
+      <span class="chrome__foot">Heritage Intelligence Report</span>
+      <div class="pager">
+        <span class="pager__count"><b>10</b> <span>/ 10</span></span>
+        <div class="pager__arrows">
+          <a id="nav-prev" class="pager__btn" href="slide-09.html">&#8592;</a>
+          <a id="nav-next" class="pager__btn" href="index.html">&#8594;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<div class="hint">Press Home to return to contents</div>
+<script src="assets/js/report.js"></script>
+</body>
+</html>
