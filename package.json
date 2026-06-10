@@ -4,8 +4,7 @@
   "scripts": {
     "build": "eleventy",
     "build:customer": "node scripts/build-report.js",
-    "dev": "eleventy --serve",
-    "preview": "eleventy --serve"
+    "dev": "eleventy --serve"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
