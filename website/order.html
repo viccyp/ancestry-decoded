@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commission Your Report — Ancestry Decoded</title>
+  <meta name="description" content="Order your personalized Forensic Phenotype Report from The Heritage Institute." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brandmark" href="index.html"><span class="dot"></span> Ancestry · Decoded</a>
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html#how">How It Works</a>
+        <a href="index.html#report">The Report</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="nav__cta">
+        <a class="btn btn--ghost" style="color:var(--cream);" href="index.html">&#8592; Back to Site</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ CHECKOUT HEAD ============ -->
+  <section class="checkout-head">
+    <div class="wrap">
+      <span class="kicker">Secure Checkout</span>
+      <h1 class="display" style="margin-top:1rem;">Commission your <em>report</em>.</h1>
+      <p class="lede">Choose an edition, tell us who it's for, and we'll begin the analysis.</p>
+      <div class="checkout-steps">
+        <span><b>1</b> Edition</span>
+        <span><b>2</b> Subject details</span>
+        <span><b>3</b> Photographs</span>
+        <span><b>4</b> Payment</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHECKOUT BODY ============ -->
+  <section class="section section--tight">
+    <div class="wrap">
+
+      <!-- CONFIRMATION (hidden until order placed) -->
+      <div class="confirm" id="confirm">
+        <div class="confirm__seal">&#10003;</div>
+        <span class="kicker kicker--center">Order Received</span>
+        <h2 class="display" style="margin-top:1rem;">Your report is <em>underway</em>.</h2>
+        <p class="body" style="margin-top:1rem;">Thank you. A confirmation has been sent to your email with a secure link to submit photographs if needed. Our analysts will begin your Forensic Phenotype Report shortly.</p>
+        <p class="confirm__order">Order Reference · <b id="confirmRef">AD-000000</b></p>
+        <div style="margin-top:2rem;">
+          <a class="btn btn--primary" href="index.html">Return to Home</a>
+        </div>
+      </div>
+
+      <!-- ORDER FORM -->
+      <form class="checkout-layout" id="orderForm" novalidate>
+
+        <!-- LEFT COLUMN -->
+        <div>
+          <!-- 1. EDITION -->
+          <div class="form-block">
+            <h2 class="form-block__title"><span class="num">01</span> Choose your edition</h2>
+            <p class="form-block__hint">Every edition includes the complete 15-plate forensic analysis.</p>
+            <div class="tier-options">
+              <label class="tier">
+                <input type="radio" name="tier" value="digital" data-price="89" data-name="Digital Edition" />
+                <span>
+                  <span class="tier__name">Digital</span>
+                  <span class="tier__desc">Navigable digital report · 72-hour delivery</span>
+                </span>
+                <span class="tier__price">£89</span>
+              </label>
+              <label class="tier">
+                <input type="radio" name="tier" value="heritage" data-price="149" data-name="Heritage Edition" checked />
+                <span>
+                  <span class="tier__name">Heritage</span>
+                  <span class="tier__desc">Extended narrative · print-ready PDF · 48-hour priority</span>
+                </span>
+                <span class="tier__price">£149</span>
+              </label>
+              <label class="tier">
+                <input type="radio" name="tier" value="archive" data-price="295" data-name="Archive Edition" />
+                <span>
+                  <span class="tier__name">Archive</span>
+                  <span class="tier__desc">Printed &amp; bound folio · presentation case · consultation</span>
+                </span>
+                <span class="tier__price">£295</span>
+              </label>
+            </div>
+            <label class="tier" style="margin-top:0.9rem;">
+              <input type="checkbox" id="giftBox" />
+              <span>
+                <span class="tier__name" style="font-size:1.05rem;">Make this a gift</span>
+                <span class="tier__desc">The recipient will receive a private link to submit their own photographs.</span>
+              </span>
+              <span class="tier__price" style="font-size:0.9rem;color:var(--ink-40);">+£0</span>
+            </label>
+          </div>
+
+          <!-- 2. SUBJECT DETAILS -->
+          <div class="form-block">
+            <h2 class="form-block__title"><span class="num">02</span> Subject &amp; contact details</h2>
+            <p class="form-block__hint">Who the report is for, and where we should send it.</p>
+            <div class="field-row">
+              <div class="field">
+                <label for="firstName">First name</label>
+                <input type="text" id="firstName" name="firstName" autocomplete="given-name" required />
+                <span class="field-error">Please enter a first name.</span>
+              </div>
+              <div class="field">
+                <label for="lastName">Last name</label>
+                <input type="text" id="lastName" name="lastName" autocomplete="family-name" required />
+                <span class="field-error">Please enter a last name.</span>
+              </div>
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+              <span class="field-error">Please enter a valid email.</span>
+            </div>
+            <div class="field">
+              <label for="subjectName">Name to appear on the report</label>
+              <input type="text" id="subjectName" name="subjectName" placeholder="e.g. The portrait of Eleni R." />
+            </div>
+            <div class="field">
+              <label for="notes">Notes for our analysts <span style="text-transform:none;letter-spacing:0;color:var(--ink-40);">(optional)</span></label>
+              <textarea id="notes" name="notes" placeholder="Anything you'd like us to know about the subject or the occasion."></textarea>
+            </div>
+          </div>
+
+          <!-- 3. PHOTOGRAPHS -->
+          <div class="form-block">
+            <h2 class="form-block__title"><span class="num">03</span> Photographs</h2>
+            <p class="form-block__hint">Upload now, or send them later using the secure link in your confirmation email.</p>
+            <div class="upload-grid">
+              <label class="dropzone" id="dzFront">
+                <span class="dz-icon">&#9633;</span>
+                <span class="dz-label">Frontal photograph</span>
+                <span class="dz-sub">JPG or PNG · neutral expression</span>
+                <span class="dz-file" hidden></span>
+                <input type="file" accept="image/*" />
+              </label>
+              <label class="dropzone" id="dzProfile">
+                <span class="dz-icon">&#9633;</span>
+                <span class="dz-label">Profile photograph</span>
+                <span class="dz-sub">JPG or PNG · side view</span>
+                <span class="dz-file" hidden></span>
+                <input type="file" accept="image/*" />
+              </label>
+            </div>
+          </div>
+
+          <!-- 4. PAYMENT -->
+          <div class="form-block">
+            <h2 class="form-block__title">
+              <span class="num">04</span> Payment
+              <span class="pay-brands">
+                <span>Visa</span><span>MC</span><span>Amex</span>
+              </span>
+            </h2>
+            <p class="form-block__hint">All transactions are encrypted. Your card is charged once, at the time of order.</p>
+            <div class="field">
+              <label for="cardName">Name on card</label>
+              <input type="text" id="cardName" name="cardName" autocomplete="cc-name" required />
+              <span class="field-error">Please enter the name on the card.</span>
+            </div>
+            <div class="field">
+              <label for="cardNumber">Card number</label>
+              <div class="card-input-wrap">
+                <input type="text" id="cardNumber" name="cardNumber" inputmode="numeric" autocomplete="cc-number" placeholder="0000 0000 0000 0000" maxlength="23" required />
+                <span class="card-chip" id="cardType"></span>
+              </div>
+              <span class="field-error">Please enter a valid card number.</span>
+            </div>
+            <div class="field-row--3" style="display:grid;gap:1rem;">
+              <div class="field">
+                <label for="cardExp">Expiry (MM/YY)</label>
+                <input type="text" id="cardExp" name="cardExp" inputmode="numeric" placeholder="MM/YY" maxlength="5" required />
+                <span class="field-error">Invalid date.</span>
+              </div>
+              <div class="field">
+                <label for="cardCvc">CVC</label>
+                <input type="text" id="cardCvc" name="cardCvc" inputmode="numeric" placeholder="123" maxlength="4" required />
+                <span class="field-error">Invalid CVC.</span>
+              </div>
+              <div class="field">
+                <label for="cardZip">Postal code</label>
+                <input type="text" id="cardZip" name="cardZip" autocomplete="postal-code" required />
+                <span class="field-error">Required.</span>
+              </div>
+            </div>
+            <div class="secure-note"><span class="lock">&#128274;</span> Secured with 256-bit encryption. We never store your full card number.</div>
+
+            <div class="demo-note">
+              <span class="badge">Demo</span>
+              <span>This is a front-end checkout for now. No real payment is processed and no card data is sent anywhere. Wire it to a payment provider (e.g. Stripe) before going live — see notes in <code>website/assets/js/site.js</code>.</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg btn--block" id="placeOrder">
+            Place Order &#8594;
+          </button>
+        </div>
+
+        <!-- RIGHT COLUMN: SUMMARY -->
+        <aside class="summary">
+          <div class="summary__head">
+            <span class="kicker kicker--plain">Order Summary</span>
+            <h3 id="sumName">Heritage Edition</h3>
+          </div>
+          <div class="summary__body">
+            <div class="summary__row">
+              <span class="muted">Forensic Phenotype Report</span>
+              <span id="sumBase">£149.00</span>
+            </div>
+            <div class="summary__row" id="rowGift" hidden>
+              <span class="muted">Gift packaging</span>
+              <span>£0.00</span>
+            </div>
+            <div class="summary__row">
+              <span class="muted">Digital delivery</span>
+              <span style="color:var(--forest);">Included</span>
+            </div>
+            <div class="summary__row summary__row--rule">
+              <span class="muted">Subtotal</span>
+              <span id="sumSubtotal">£149.00</span>
+            </div>
+            <div class="summary__row">
+              <span class="muted">VAT (20%)</span>
+              <span id="sumVat">£29.80</span>
+            </div>
+            <div class="summary__total summary__row--rule">
+              <span class="label">Total Due</span>
+              <span class="amount" id="sumTotal">£178.80</span>
+            </div>
+            <ul class="summary__perks">
+              <li><span class="mark">&#10003;</span> Complete 15-plate analysis</li>
+              <li><span class="mark">&#10003;</span> Morphological affinity index</li>
+              <li><span class="mark">&#10003;</span> Free deletion of source imagery on request</li>
+            </ul>
+          </div>
+        </aside>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer__bottom" style="margin-top:0;border-top:0;">
+        <span class="brandmark"><span class="dot"></span> Ancestry · Decoded</span>
+        <span>&copy; MMXXVI The Heritage Institute · Secure Checkout</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
